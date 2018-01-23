@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<ul>
+  <li><a routerLink="">Home</a></li>
+
+  <div class="dropdown">
+    <li (mouseenter)="openDropdown()" class="dropbtn">Exams</li>
+    <div id="myDropdown" class="dropdown-content">
+      <a routerLink="book">Book an Exam</a>
+      <a routerLink="form">Pre-Exam Day Form</a>
+      <a routerLink="tips">Exam Day: What to expect</a>
+    </div>
+  </div>
+
+
+  <li><a routerLink="about">About</a></li>
+</ul>
+
+<router-outlet></router-outlet>
