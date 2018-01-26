@@ -1,9 +1,12 @@
 .container {
 	display: grid;
-	grid-template-columns: 50% auto;
+	grid-template-columns: 33% 33% auto;
 }
 .col {
 	padding: .4em 1.3em;
+}
+.end {
+	padding-bottom: 1em;
 }
 .color-dark {
 	background: #2885C4;
@@ -25,4 +28,12 @@ input.btn {
 	color: #003A61;
 	margin-bottom: 1em;
 	cursor: pointer;
+}
+.header {
+	font-size: 1.5em;
+	margin-bottom: 0px;
+}
+.asterisk {
+	font-size: .7em;
+	margin-bottom: 0px;
 }
