@@ -10,7 +10,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.post('/submit', (req, res) => {
-  res.send('submit works');
+  console.log(req.body);
+  res.end();
 })
 
 // Catch all other routes and return the index file

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -30,8 +31,8 @@ export class FormComponent implements OnInit {
 	submission: string;
 	examDetails = {};
 
-
-  constructor() { }
+	// Inject HttpClient into your component or service.
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
@@ -61,6 +62,7 @@ export class FormComponent implements OnInit {
   	};
   	console.log(this.examDetails);
   	this.clearForm();
+  	this.sendForm();
   }
 
   clearForm() {
@@ -86,5 +88,11 @@ export class FormComponent implements OnInit {
 		this.submission = '';
 		this.examDetails = {};
   }
+
+  sendForm() {
+  	this.http.post('/submit', this.submission).subscribe();
+  }
+
+
 
 }
