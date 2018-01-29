@@ -16,5 +16,3 @@ db.once('open', function() {
 });
 
 module.exports = db;
-
-// , { useMongoClient: true }

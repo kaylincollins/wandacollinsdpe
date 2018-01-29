@@ -30,15 +30,16 @@ const Form = mongoose.model('Form', formSchema);
 
 module.exports.Form = Form;
 
-// module.exports.fetchAllForms = (req, res) => {
-//   console.log('inside fetch', req.body);
-//   Form.find({ username: req.body.username })
-//     .catch(() => console.log('error'))
-//     .then(voyages => res.send(JSON.stringify(voyages)));
-// };
+module.exports.fetchAllForms = (req, res) => {
+  Form.find()
+    .catch(() => console.log('error'))
+    .then(data => {
+      console.log(data);
+      res.send(JSON.stringify(data));
+    });
+};
 
 module.exports.saveForm = (req, res, next) => {
-  console.log('REQ', req.body);
   const newForm = new Form({
     firstName: req.body.firstName,
     middleName: req.body.middleName,

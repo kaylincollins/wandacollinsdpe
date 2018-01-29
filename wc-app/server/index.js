@@ -11,6 +11,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist')));
 
+app.get('/submissions', db.fetchAllForms, (req, res) => {
+  res.end();
+})
+
 app.post('/submit', db.saveForm, (req, res) => {
   res.end();
 })
