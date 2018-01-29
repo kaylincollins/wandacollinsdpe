@@ -9,10 +9,12 @@
 	padding-bottom: 1em;
 }
 .color-dark {
-	background: #2885C4;
+	/*background: #2885C4;*/
+	background: #494E6B
 }
 .color-light {
-	background: #5783F1;
+	/*background: #5783F1;*/
+	background: #494E6B
 }
 input.txt {
 	border: 0;
@@ -24,8 +26,9 @@ input.btn {
 	border: 0;
 	display: block;
 	padding: 1em 3em;
-	background: #A5F883;
-	color: #003A61;
+	/*background: #A5F883;*/
+	background: #985E6D;
+	color: #fff;
 	margin-bottom: 1em;
 	cursor: pointer;
 }

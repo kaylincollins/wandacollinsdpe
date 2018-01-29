@@ -5,9 +5,11 @@
 .col {
 	padding: .4em 1.3em;
 }
-.color-dark {
-	background: #2885C4;
-}
 .color-light {
-	background: #5783F1;
+	background: #98878F;
+}
+img {
+    width:auto;
+    max-width:100%;
+    height:auto;
 }
