@@ -29,7 +29,8 @@ export class FormComponent implements OnInit {
 	meetingLocation: string;
 	tailNumber: string;
 	submission: string;
-	examDetails = {};
+	form = {};
+	examDetails = [];
 
 	// Inject HttpClient into your component or service.
   constructor(private http: HttpClient) { }
@@ -38,7 +39,7 @@ export class FormComponent implements OnInit {
   }
 
   submitForm() {
-  	this.examDetails = {
+  	this.form = {
   		firstName: this.firstName,
 		  middleName: this.middleName,
 		  lastName: this.lastName,
@@ -58,11 +59,12 @@ export class FormComponent implements OnInit {
 			payment: this.payment,
 			meetingLocation: this.meetingLocation,
 			tailNumber: this.tailNumber,
-			submission: this.submission,
+			submission: this.submission
   	};
-  	console.log(this.examDetails);
-  	this.clearForm();
+  	this.examDetails.push(this.form);
+  	// console.log(this.examDetails);
   	this.sendForm();
+  	this.clearForm();
   }
 
   clearForm() {
@@ -86,13 +88,12 @@ export class FormComponent implements OnInit {
 		this.meetingLocation = '';
 		this.tailNumber = '';
 		this.submission = '';
-		this.examDetails = {};
+		// this.form = {};
   }
 
   sendForm() {
-  	this.http.post('/submit', this.submission).subscribe();
+  	let body = this.examDetails[this.examDetails.length -1];
+  	this.http.post('/submit', body).subscribe();
   }
-
-
 
 }

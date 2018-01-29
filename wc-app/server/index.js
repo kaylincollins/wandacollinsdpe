@@ -3,14 +3,15 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 
+const db = require('../database/database');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.post('/submit', (req, res) => {
-  console.log(req.body);
+app.post('/submit', db.saveForm, (req, res) => {
   res.end();
 })
 

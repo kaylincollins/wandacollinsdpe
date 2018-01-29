@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { BookComponent } from './book/book.component';
 import { FormComponent } from './form/form.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FormComponent } from './form/form.component';
     HomeComponent,
     AboutComponent,
     BookComponent,
-    FormComponent
+    FormComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

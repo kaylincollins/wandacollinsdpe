@@ -124,10 +124,10 @@
 
 <div class="col color-light end">
 	<p>How will you be submitting your application?</p>
-		<input type="radio" id="electronic" name="submission" value="electronic">
+		<input type="radio" id="electronic" name="submission" value="electronic" [(ngModel)]="submission">
     <label for="submissionChoice1">IACRA <em>(preferred)</em></label>
 
-    <input type="radio" id="paper" name="submission" value="paper">
+    <input type="radio" id="paper" name="submission" value="paper" [(ngModel)]="submission">
     <label for="submissionChoice2">FAA Form 8710-1</label>
 </div>
 
