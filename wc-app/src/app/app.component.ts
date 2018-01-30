@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
- 	openDropdown() {
+ 	toggleDropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
 	}
 

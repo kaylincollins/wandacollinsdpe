@@ -3,8 +3,8 @@
   <li><a routerLink="">Home</a></li>
 
   <div class="dropdown">
-    <li (mouseenter)="openDropdown()" class="dropbtn">Checkrides</li>
-    <div id="myDropdown" class="dropdown-content">
+    <li (mouseenter)="toggleDropdown()" class="dropbtn">Checkrides</li>
+    <div id="myDropdown" class="dropdown-content" (click)="toggleDropdown()">
       <a routerLink="book">Book a Checkride</a>
       <a routerLink="form">Pre-Exam Day Form</a>
       <a routerLink="tips">Exam Day: What to expect</a>

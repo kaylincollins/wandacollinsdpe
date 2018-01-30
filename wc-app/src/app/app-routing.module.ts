@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { BookComponent } from './book/book.component';
 import { FormComponent } from './form/form.component';
 import { AdminComponent } from './admin/admin.component';
+import { TipsComponent } from './tips/tips.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent
+  },
+  {
+    path: 'tips',
+    component: TipsComponent
   }
 ];
 
